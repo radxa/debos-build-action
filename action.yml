@@ -24,7 +24,7 @@ runs:
         -b ${{ inputs.board }} -m ${{ inputs.flavor }}
     - name: Upload
       if: inputs.release-id != '' && inputs.github-token != ''
-      uses: xresloader/upload-to-github-release@v1
+      uses: xresloader/upload-to-github-release@v1.3.2
       env:
           GITHUB_TOKEN: ${{ inputs.github-token }}
       with:
