@@ -41,7 +41,6 @@ runs:
       with:
         release_id: ${{ inputs.release-id }}
         file: ./output/*.img.*
-        draft: false
     - name: Rollback release
       if: failure() && inputs.release-id != '' && inputs.github-token != ''
       uses: author/action-rollback@stable
