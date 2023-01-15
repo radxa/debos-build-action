@@ -26,7 +26,7 @@ runs:
       run: |
         if [[ "${{ inputs.flavor }}" == "kde" ]]
         then
-          echo "variant=xfce" >> $GITHUB_ENV
+          echo "variant=xfce4" >> $GITHUB_ENV
         else
           echo "variant=server" >> $GITHUB_ENV
         fi
