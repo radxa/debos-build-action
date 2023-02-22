@@ -26,7 +26,7 @@ runs:
     - name: Convert flavor to variant
       shell: bash
       run: |
-        if [[ "${{ inputs.flavor }}" == "kde" ]] && [[ "${{ inputs.board }}" != "rockpi-s" ]]
+        if [[ "${{ inputs.flavor }}" != "cli" ]] && [[ "${{ inputs.board }}" != "rockpi-s" ]]
         then
           echo "variant=xfce4" >> $GITHUB_ENV
         else
